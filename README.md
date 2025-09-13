@@ -10,23 +10,6 @@ The datasets contain orders data from our e-commerce platform. In the orders dat
 ```mermaid
 flowchart LR
 
-    subgraph Orders Dataset
-        O1[order_id]
-        O2[user_id]
-        O3[product_id]
-        O4[order_date]
-        O5[num_items]
-        O6[bundle_adopted]
-    end
-
-    subgraph Products Dataset
-        P1[product_id]
-        P2[category]
-        P3[subcategory]
-        P4[brand]
-        P5[price]
-    end
-
     subgraph Users Dataset
         U1[user_id]
         U2[signup_date]
@@ -36,8 +19,25 @@ flowchart LR
         U6[buyer_type]
     end
 
-    O3 <-- P1
-    O2 <-- U1
+subgraph Products Dataset
+        P1[product_id]
+        P2[category]
+        P3[subcategory]
+        P4[brand]
+        P5[price]
+    end
+
+    subgraph Orders Dataset
+        O1[order_id]
+        O2[user_id]
+        O3[product_id]
+        O4[order_date]
+        O5[num_items]
+        O6[bundle_adopted]
+    end
+
+    P1 --> O3
+    U1 --> O2
 
 ```
 
