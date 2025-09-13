@@ -9,6 +9,16 @@ The datasets contain orders data from our e-commerce platform. In the orders dat
 
 ```mermaid
 flowchart LR
+
+    subgraph Orders Dataset
+        O1[order_id]
+        O2[user_id]
+        O3[product_id]
+        O4[order_date]
+        O5[num_items]
+        O6[bundle_adopted]
+    end
+
     subgraph Products Dataset
         P1[product_id]
         P2[category]
@@ -26,17 +36,8 @@ flowchart LR
         U6[buyer_type]
     end
 
-    subgraph Orders Dataset
-        O1[order_id]
-        O2[user_id]
-        O3[product_id]
-        O4[order_date]
-        O5[num_items]
-        O6[bundle_adopted]
-    end
-
-    P1 --> O3
-    U1 --> O2
+    O3 <-- P1
+    O2 <-- U1
 
 ```
 
@@ -81,13 +82,13 @@ Other **buyer types'** **AOVs** are as follows:
 
 ### **Platform** Performance
 
-- Users who placed orders on the **web** have the **highest adoption rate** at **72.83%**.
+- **Web** users have the **highest adoption rate** at **72.83%**.
 
-- Orders placed on the **app** have a **71.72% adoption rate**.
+- **App** users have an **adoption rate** of **71.72%**.
 
-- Users who placed orders on the **app** have the **highest AOV** at **$268.72**.
+- **App** users have the **highest AOV** at **$268.72**.
 
-- Orders placed on the **web** have a **$265.75 AOV**.
+- **Web** users have an **AOV** of **$265.75**.
 
 ## 5. Recommendations
 The Bundle & Save feature has been successful. In the time that it has been launched, **72.05%** of users have used it. But while most users have adopted the feature, its impact on **AOV** has been small. **AOV** of orders without the Bundle & Save feature is **$267.81**, and **AOV** of orders with the Bundle & Save feature is **$267.91**. If we want to increase **AOV**, my recommendation would be to work with the product team and adjust the Bundle & Save feature or create other tiers of discount options. For example, buy 3 items and save x amount, buy 4 items and save y amount, etc. These could increase order size and thus increase **AOV** over time.
