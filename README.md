@@ -15,14 +15,14 @@ The key business question was:
 
 After cleaning and analyzing the data, I built Tableau dashboard that visualizes weekly **adoption rate** and **AOV** across both **buyer type** and **platform**, over time and in aggregate.
 
-View the interactive dashboard [here.](https://public.tableau.com/app/profile/pablo.vega1512/viz/SocialCommerceMarketplaceProductAnalysis/Dashboard1#1)
+View the dashboard on Tableau Public [here.](https://public.tableau.com/app/profile/pablo.vega1512/viz/SocialCommerceMarketplaceProductAnalysis/Dashboard1#1)
 
 ![Tableau Dashboard](product_dashboard.png)
 
 ## 4. Insights Deep Dive
 Here are the most notable findings:
 
-- **adoption rate** is **72.05%**
+- **Adoption rate** is **72.05%**
 
 - **AOV** is **$267.84**
 
