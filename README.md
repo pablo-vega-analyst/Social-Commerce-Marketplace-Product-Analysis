@@ -8,21 +8,36 @@ This task involved cleaning and analyzing orders made on our platform, followed 
 The datasets contain orders data from our e-commerce platform. In the orders dataset, each row represents an order placed by one user on a specific date. In the users dataset, each row represents key attributes of one user. In the products dataset, each row represents key attributes of a specific clothing item. The relationships between the tables is as follows:
 
 ```mermaid
-flowchart LR
-    subgraph Products
-        P[product_id, category, subcategory, brand, price]
-    end
+erDiagram
+    PRODUCTS {
+        text product_id
+        text category
+        text subcategory
+        text brand
+        double price
+    }
 
-    subgraph Users
-        U[user_id, name, email, signup_date]
-    end
+    USERS {
+        text user_id
+        date signup_date
+        text region
+        text device
+        text platform
+        text buyer_type
+    }
 
-    subgraph Orders
-        O[order_id, product_id, user_id, order_date]
-    end
+    ORDERS {
+        text order_id
+        text user_id
+        text product_id
+        date order_date
+        int num_items
+        int bundle_adopted
+    }
 
-    P --> O
-    U --> O
+    PRODUCTS --> ORDERS
+    USERS --> ORDERS
+
 ```
 
 ## 3. Executive Summary
