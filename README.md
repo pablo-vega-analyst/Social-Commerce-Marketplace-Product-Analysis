@@ -10,29 +10,33 @@ The datasets contain orders data from our e-commerce platform. In the orders dat
 ```mermaid
 erDiagram
     PRODUCTS {
-        int product_id
-        string category
-        string subcategory
-        string brand
-        float price
+        text product_id
+        text category
+        text subcategory
+        text brand
+        double price
     }
 
     USERS {
-        int user_id
-        string name
-        string email
+        text user_id
         date signup_date
+        text region
+        text device
+        text platform
+        text buyer_type
     }
 
     ORDERS {
-        int order_id
-        int product_id
-        int user_id
+        text order_id
+        text user_id
+        text product_id
         date order_date
+        int num_items
+        int bundle_adopted
     }
 
-    PRODUCTS ||--o{ ORDERS : "contains"
-    USERS ||--o{ ORDERS : "places"
+    PRODUCTS --> ORDERS
+    USERS --> ORDERS
 
 ```
 
