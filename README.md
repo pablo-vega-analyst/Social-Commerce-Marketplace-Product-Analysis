@@ -34,6 +34,7 @@ erDiagram
 
     PRODUCTS ||--o{ ORDERS : "contains"
     USERS ||--o{ ORDERS : "places"
+
 ```
 
 ## 3. Executive Summary
