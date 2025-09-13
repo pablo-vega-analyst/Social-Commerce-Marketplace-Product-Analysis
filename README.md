@@ -7,7 +7,6 @@ This task involved cleaning and analyzing orders made on our platform, followed 
 ## 2. Data Structure Overview
 The datasets contain orders data from our e-commerce platform. In the orders dataset, each row represents an order placed by one user on a specific date. In the users dataset, each row represents key attributes of one user. In the products dataset, each row represents key attributes of a specific clothing item. The relationships between the tables is as follows:
 
-```markdown
 ```mermaid
 erDiagram
     PRODUCTS {
