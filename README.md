@@ -7,39 +7,7 @@ This task involved cleaning and analyzing orders made on our platform, followed 
 ## 2. Data Structure Overview
 The datasets contain orders data from our e-commerce platform. In the orders dataset, each row represents an order placed by one user on a specific date. In the users dataset, each row represents key attributes of one user. In the products dataset, each row represents key attributes of a specific clothing item. The relationships between the tables is as follows:
 
-```mermaid
-flowchart LR
-
-    subgraph Users Dataset
-        U1[user_id]
-        U2[signup_date]
-        U3[region]
-        U4[device]
-        U5[platform]
-        U6[buyer_type]
-    end
-
-subgraph Products Dataset
-        P1[product_id]
-        P2[category]
-        P3[subcategory]
-        P4[brand]
-        P5[price]
-    end
-
-    subgraph Orders Dataset
-        O1[order_id]
-        O2[user_id]
-        O3[order_date]
-        O3[num_items]
-        O5[bundle_adopted]
-        O6[product_id]
-    end
-
-    P1 --> O6
-    U1 --> O2
-
-```
+![ER Diagram](product_erd.png)
 
 ## 3. Executive Summary
 The key business question was:
